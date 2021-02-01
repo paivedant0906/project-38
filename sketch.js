@@ -79,7 +79,7 @@ function draw() {
   
   background(180);
   
-  text("Score: "+ score, displayWidth/2+300,displayHeight/2-100);
+  text("Score: "+ score, camera.x,displayHeight/2-100);
   console.log(getFrameRate());
   
   camera.x=trex.x
