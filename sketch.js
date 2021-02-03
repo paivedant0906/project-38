@@ -45,7 +45,7 @@ function setup() {
   trex.addAnimation("collided", trex_collided);
   
 
-  trex.scale = 0.5;
+  trex.scale = 0.7;
   
   ground = createSprite(camera.x,displayHeight-20,displayWidth+10000000000000,20);
   ground.addImage("ground",groundImage);
@@ -101,7 +101,7 @@ trex.changeAnimation("running", trex_running);
     }
     
     
-    if(keyDown("space")&& trex.y >= displayHeight/2+300) {
+    if(keyDown("space")&& trex.y >= displayHeight/2+240) {
         trex.velocityY = -12;
         jumpSound.play();
     }
@@ -172,7 +172,7 @@ function reset(){
 
 function spawnObstacles(){
  if (frameCount % 60 === 0){
-   var obstacle = createSprite(camera.x+displayWidth/2,displayHeight-35,10,40);
+   var obstacle = createSprite(camera.x+displayWidth/2,displayHeight-50,10,40);
    obstacle.velocityX = -(6 + score/100);
    
    
@@ -194,7 +194,7 @@ function spawnObstacles(){
     }
    
          
-    obstacle.scale = 0.5;
+    obstacle.scale = 0.8;
     obstacle.lifetime = 300;
    
    
@@ -208,7 +208,7 @@ function spawnClouds() {
     var cloud = createSprite(camera.x+displayWidth/2,displayHeight/2,40,10);
     cloud.y = Math.round(random(displayHeight/2,displayHeight/2+100));
     cloud.addImage(cloudImage);
-    cloud.scale = 0.5;
+    cloud.scale = 0.8;
     cloud.velocityX = -3;
     
      
